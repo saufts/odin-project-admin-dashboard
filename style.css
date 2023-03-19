@@ -6,7 +6,7 @@
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: auto;
+    grid-template-rows: 1fr 3fr;
     justify-content: center;
     height: 100vh;
 }
@@ -25,10 +25,6 @@
     font-weight: 500;
 }
 
-.main-content {
-    background-color: #d6d8cf;
-}
-
 .logo {
     justify-self: start;
     font-size: 20px;
@@ -44,7 +40,7 @@ li {
     font-size: 1.5rem;
 }
 
-.header .row1 {
+.header .row1, .row2 {
     display: flex;
     justify-content: space-between;
 }
@@ -67,4 +63,23 @@ input {
 
 ul {
     list-style: none;
+}
+
+.row2 .buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+
+.main-content {
+    background-color: #d6d8cf;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.main-content .left-column {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: (3, 1fr);
 }
